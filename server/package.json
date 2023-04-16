@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "build": "cd ../client && npm install && npm run build && cd ../server",
     "devstart": "nodemon app.js",
     "serverstart": "npm run devstart"
   },
