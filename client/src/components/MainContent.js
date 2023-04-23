@@ -8,7 +8,7 @@ const MainContent = () => {
   const [constants, setConstants] = useState([]);
 
   useEffect(() => {
-    fetch("https://physicssem2pbl.up.railway.app/api/constants", {
+    fetch("http://localhost:3000/api/constants", {
       "Content-Type": "application/json",
     })
       .then((res) => res.json())

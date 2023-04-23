@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Route for the frontend
-app.use("/", express.static(path.resolve(__dirname, "../client/dist")))
+app.use("/constants", express.static(path.resolve(__dirname, "../client/dist")))
 
 // API route
 const apiRouter = require("./routes/api");
