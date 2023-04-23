@@ -39,6 +39,11 @@ header {
   margin-left: 5%;
 }
 
+.navLink {
+  text-decoration: none;
+  color: #784BA0;
+}
+
 .userDetails {
   padding-right: 5%;
   display: flex;

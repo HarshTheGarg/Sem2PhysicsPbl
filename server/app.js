@@ -31,6 +31,11 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Converter Route ( Main )
+app.get("/", (req, res) => {
+  res.json({"Hello": "World!"})
+})
+
 // Route for the frontend
 app.use("/constants", express.static(path.resolve(__dirname, "../client/dist")))
 

@@ -1,20 +1,15 @@
 // Import react and Hooks
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 // Import Components
 import Header from "./Header";
-import MainContent from "./MainContent";
-import Footer from "./Footer";
-
-// Import style
-import "../assets/style.css"
+import MainContent from "./constants/MainContent";
 
 const App = () => {
   return (
     <div className="mainContainer">
-      <Header />
+      <Header title="Constants"/>
       <MainContent />
-      <Footer />
     </div>
   )
 };
