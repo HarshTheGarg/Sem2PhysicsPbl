@@ -43,11 +43,6 @@ app.use("/constants", express.static(path.resolve(__dirname, "../client/dist")))
 const apiRouter = require("./routes/api");
 app.use("/api", apiRouter);
 
-// Test Route
-app.get("/test", (req, res) => {
-  res.send("&copy<sub>o</sub>");
-});
-
 // Create and handle 404 Error
 app.use((req, res, next) => {
   res.status(404);

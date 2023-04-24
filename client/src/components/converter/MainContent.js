@@ -7,7 +7,7 @@ function MainContent() {
   const [selector, setSelector] = useState("si");
 
   function onSelector() {
-    selector == "si" ? setSelector("egs") : setSelector("si");
+    selector == "si" ? setSelector("cgs") : setSelector("si");
   }
 
   function btnPress() {
@@ -20,8 +20,8 @@ function MainContent() {
         <div className={`converterSelectorOption ${selector == "si" ? "converterSelectorOptionSelected" : ""}`} onClick={onSelector}>
           To SI
         </div>
-        <div className={`converterSelectorOption ${selector == "egs" ? "converterSelectorOptionSelected" : ""}`} onClick={onSelector}>
-          To EGS
+        <div className={`converterSelectorOption ${selector == "cgs" ? "converterSelectorOptionSelected" : ""}`} onClick={onSelector}>
+          To CGS
         </div>
       </div>
 

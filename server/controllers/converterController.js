@@ -9,15 +9,15 @@ exports.findMultiplier = (req, res, next) => {
         }
           // res.json(result);
           if ( result ) {
-          res.json({"multiplier": `${result.toEgsMultiplier}`});
+          res.json({"multiplier": `${result.toCgsMultiplier}`});
           } else {
             res.json({"err": "Not Found"});
           }
       })
   }
 
-  if ( req.params.from == "egsUnit"){
-    Converter.findOne({"egsUnit": req.params.unit})
+  if ( req.params.from == "cgsUnit"){
+    Converter.findOne({"cgsUnit": req.params.unit})
       .exec((err, result) => {
         if ( err ) {
           return next(err);
@@ -37,8 +37,8 @@ exports.post = (req, res, next) => {
   const converter = new Converter({
     siUnit: req.body.siUnit,
     toSiMultiplier: req.body.toSiMultiplier,
-    egsUnit: req.body.egsUnit,
-    toEgsMultiplier: req.body.toEgsMultiplier
+    cgsUnit: req.body.cgsUnit,
+    toCgsMultiplier: req.body.toCgsMultiplier
   });
 
   converter.save((err, result) => {
