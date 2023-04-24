@@ -12,7 +12,7 @@ const MainContent = () => {
       "Content-Type": "application/json",
     })
       .then((res) => res.json())
-      .then((data) => setConstants([data]));
+      .then((data) => setConstants(data));
   }, []);
 
   if (!constants.length) {
